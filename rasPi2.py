@@ -27,6 +27,8 @@ SOCK_STREAM is the socket type (the default).
 '''
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
+exit
+
 print 'Connecting to %(host)s:%(port)s...' % irc
 try:
     s.connect((irc['host'], irc['port']))
