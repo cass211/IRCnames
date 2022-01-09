@@ -27,14 +27,14 @@ SOCK_STREAM is the socket type (the default).
 '''
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-exit()
-
 print 'Connecting to %(host)s:%(port)s...' % irc
 try:
     s.connect((irc['host'], irc['port']))
 except socket.error:
     print 'Error connecting to IRC server %(host)s:%(port)s' % irc
     sys.exit(1)
+
+exit()
 
 s.send('NICK %(nick)s\r\n' % user)
 s.send('USER %(username)s %(hostname)s %(servername)s :%(realname)s\r\n' % user)
