@@ -61,5 +61,5 @@ while True:
         names = []
         time.sleep(irc['namesinterval'])
         s.send('NAMES %(channel)s\r\n' % irc)
-#I can write to this program now as well - JJCASS
+
 
