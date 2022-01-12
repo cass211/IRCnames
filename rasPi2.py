@@ -34,12 +34,15 @@ except socket.error:
     print 'Error connecting to IRC server %(host)s:%(port)s' % irc
     sys.exit(1)
 
-exit()
+#exit()
 
 s.send('NICK %(nick)s\r\n' % user)
 s.send('USER %(username)s %(hostname)s %(servername)s :%(realname)s\r\n' % user)
 s.send('JOIN %(channel)s\r\n' % irc)
 s.send('NAMES %(channel)s\r\n' % irc)
+
+time.sleep(10)
+exit()
 
 read_buffer = ''
 names = []
