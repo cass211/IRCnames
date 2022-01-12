@@ -71,6 +71,7 @@ while True:
             print '\r\nUsers in %(channel)s:' % irc
         for name in names:
             print name
+        #exit()
         names = []
         time.sleep(irc['namesinterval'])
         s.send('NAMES %(channel)s\r\n' % irc)
