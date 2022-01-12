@@ -50,6 +50,7 @@ s.send('NAMES %(channel)s\r\n' % irc)
 
 time.sleep(10)
 exit()
+print('sent NAMES %(channel)s\r\n' % irc)
 
 read_buffer = ''
 names = []
