@@ -31,8 +31,9 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print 'Connecting to %(host)s:%(port)s...' % irc
 try:
     s.connect((irc['host'], irc['port']))
-except socket.error:
+except socket.error as se:
     print 'Error connecting to IRC server %(host)s:%(port)s' % irc
+    print se
     sys.exit(1)
 
 #exit()
