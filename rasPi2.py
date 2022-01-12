@@ -17,6 +17,7 @@ user = {
     'nick' : 'c3-bot',                   # use nick-bot
     'username' : 'botuser',               # username-bot
     'hostname' : 'localhost',
+    'servername' : 'irc.libera.chat',
     'realname' : 'Raspberry Pi Names Bot' # add a descriptive message
 }
 
