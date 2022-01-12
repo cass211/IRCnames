@@ -14,7 +14,7 @@ irc = {
 }
 
 user = {
-    'nick' : 'c3-bot',                   # use nick-bot
+    'nick' : 'jm-bot',                   # use nick-bot
     'username' : 'botuser',               # username-bot
     'hostname' : 'localhost',
     'servername' : 'irc.libera.chat',
