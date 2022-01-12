@@ -53,7 +53,7 @@ read_buffer = ''
 names = []
 
 while True:
-    read_buffer += recv(1024)
+    read_buffer += s.recv(1024)
     print("read next 1024")
     lines = read_buffer.split('\r\n')
     read_buffer = lines.pop();     # that semicolon is in both copies of code
