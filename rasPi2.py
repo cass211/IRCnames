@@ -76,7 +76,7 @@ while True:
             print( name)
         #exit()
         names = []
-        time.sleep(irc['namesinterval'])
-        s.send(('NAMES %(channel)s\r\n' % irc).encode())
+    time.sleep(irc['namesinterval'])
+    s.send(('NAMES %(channel)s\r\n' % irc).encode())
 
 
