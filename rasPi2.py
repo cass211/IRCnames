@@ -71,7 +71,7 @@ while True:
             names += names_list.split(' ')
         if response_code == RPL_ENDOFNAMES:
             print('resp. was RPL_ENDOFNAMES')
-            print( '\r\nUsers in %(channel)s:') % irc
+            print( '\r\nUsers in %(channel)s:' % irc)
         for name in names:
             print( name)
         #exit()
