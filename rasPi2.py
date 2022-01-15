@@ -1,6 +1,4 @@
-
-# runs with python2
-# From the Raspberry Pi User Guide p188
+#!/usr/bin/env python3
 
 import sys, socket, time
 
@@ -11,7 +9,7 @@ irc = {
     'host' : 'irc.libera.chat',  # Fully qualified domain name of irc server
     'port' : 6667,
     'channel' : '#jim',
-    'namesinterval' : 5
+    'namesinterval' : 15
 }
 
 user = {
@@ -24,7 +22,7 @@ user = {
 
 '''
 class socket.socket(family=AF_INET, type=SOCK_STREAM, proto=0, fileno=None)
-Create a socket object.  AF_INET is the address family (the default).  
+Create a socket object.  AF_INET is the address family (the default).
 SOCK_STREAM is the socket type (the default).
 '''
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -70,13 +68,13 @@ while True:
             names_list = response[3].split(':')[1]
             names += names_list.split(' ')
         if response_code == RPL_ENDOFNAMES:
+            # Display the names
             print('resp. was RPL_ENDOFNAMES')
-            print( '\r\nUsers in %(channel)s:') % irc
-        for name in names:
-            print( name)
-        #exit()
-        names = []
-        time.sleep(irc['namesinterval'])
-        s.send(('NAMES %(channel)s\r\n' % irc).encode())
+            print( '\r\nUsers in %(channel)s:' % irc)
+            for name in names:
+                print(name)
+            names = []
+            time.sleep(irc['namesinterval'])
+            s.send(('NAMES %(channel)s\r\n' % irc).encode())
 
 
