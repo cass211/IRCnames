@@ -1,0 +1,138 @@
+cindy@opti7010:~/testingggg$ python3 rasPi2.py 
+Connecting to irc.libera.chat:6667...
+connect succeeded
+sent NICK jm-bot
+
+sent USER botuser localhost irc.libera.chat :Raspberry Pi Names Bot
+
+sent JOIN #jim
+
+sent NAMES #jim
+
+read next 1024                        start of while loop
+for line in lines          start of for loop
+response code is NOTICE
+read next 1024             repeat while loop
+for line in lines          start of for loop
+response code is NOTICE
+for line in lines          start of for loop
+response code is NOTICE
+read next 1024                        repeat while loop
+for line in lines          start of for loop
+response code is NOTICE
+read next 1024             repeat while loop
+for line in lines          start of for loop
+response code is 001 RPL_WELCOME
+for line in lines          start of for loop
+response code is 002 RPL_YOURHOST
+for line in lines          start of for loop
+response code is 003 RPL_CREATED
+for line in lines          start of for loop
+response code is 004 RPL_MYINFO
+for line in lines          start of for loop
+response code is 005 RPL_BOUNCE
+for line in lines          start of for loop
+response code is 005 RPL_BOUNCE
+for line in lines          start of for loop
+response code is 005 RPL_BOUNCE
+read next 1024                        repeat while loop (empty buffer?)
+for line in lines          start of for loop
+response code is 251 RPL_LUSERCLIENT
+for line in lines          start of for loop
+response code is 252 RPL_LUSEROP
+for line in lines          start of for loop
+response code is 253 RPL_LUSERUNKNOWN
+for line in lines          start of for loop
+response code is 254 RPL_LUSERCHANNELS
+for line in lines          start of for loop
+response code is 255 RPL_LUSERME
+for line in lines          start of for loop
+response code is 265 RPL_LOCALUSERS
+for line in lines          start of for loop
+response code is 266 RPL_GLOBALUSERS
+for line in lines          start of for loop
+response code is 250 RPL_STATSDLINE
+for line in lines          start of for loop
+response code is 375 RPL_MOTDSTART
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+read next 1024                        repeat while loop
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 372 RPL_MOTD
+for line in lines          start of for loop
+response code is 376 RPL_ENDOFMOTD
+for line in lines          start of for loop
+response code is MODE
+read next 1024                        repeat while loop
+for line in lines          start of for loop
+response code is JOIN
+read next 1024                        repeat while loop
+for line in lines          start of for loop
+response code is 353 RPL_NAMREPLY               line 65
+resp. was RPL_NAMREPLY                          line 67
+jm-bot
+jcass_
+gry
+apple_
+jcass
+jim
+for line in lines          start of for loop     line 62
+response code is 366 RPL_ENDOFNAMES              line 65
+resp. was RPL_ENDOFNAMES                         line 71
+
+Users in #jim:                                   line 72
+for line in lines          start of for loop     line 62
+response code is 353 RPL_NAMREPLY
+resp. was RPL_NAMREPLY
+jm-bot
+jcass_
+gry
+apple_
+jcass
+jim
+for line in lines          start of for loop     line 62
+response code is 366 RPL_ENDOFNAMES
+resp. was RPL_ENDOFNAMES
+
+Users in #jim:
+
+
+
+^CTraceback (most recent call last):
+  File "/home/cindy/testingggg/rasPi2.py", line 57, in <module>
+    read_buffer += (s.recv(1024).decode())
+KeyboardInterrupt
+
+cindy@opti7010:~/testingggg$ 
+
+
