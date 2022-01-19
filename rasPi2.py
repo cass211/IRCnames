@@ -154,6 +154,7 @@ while True:
     read_buffer = lines.pop();     # that semicolon is in both copies of code
     for line in lines:
         print('for line in lines')
+        print(f"line is {line}")
         response = line.rstrip().split(' ', 3)
         response_code = response[1]
 
