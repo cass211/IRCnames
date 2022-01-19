@@ -156,7 +156,15 @@ while True:
         print('for line in lines')
         response = line.rstrip().split(' ', 3)
         response_code = response[1]
-        print( 'response code is ' + str(response_code) )
+
+        # print the response code according to whether that code appears
+        # in the response_dict.
+        if response_code in response_dict:
+            response_label = response_dict[response_code]
+            print( f'response code is {response_code}, {response_label}' )
+        else:
+            print( f'response code is {response_code}' )
+
         if response_code == RPL_NAMREPLY:
             print('resp. was RPL_NAMREPLY')
             names_list = response[3].split(':')[1]
